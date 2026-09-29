@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
   const post = blogPosts.find((item) => item.slug === slug);
   if (!post) return {};
   return {
-    title: `${post.seoTitle} | TheDark8 Tech`,
+    title: `${post.seoTitle} | FERRAX`,
     description: post.metaDescription,
     alternates: { canonical: `/blog/${post.slug}` },
     openGraph: { title: post.seoTitle, description: post.metaDescription, type: "article" },
@@ -32,7 +32,7 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
     headline: post.title,
     description: post.metaDescription,
     author: { "@type": "Organization", name: post.author },
-    publisher: { "@type": "Organization", name: "TheDark8 Tech" },
+    publisher: { "@type": "Organization", name: "FERRAX" },
     mainEntityOfPage: `/blog/${post.slug}`,
     ...(post.date ? { datePublished: post.date } : {}),
   };

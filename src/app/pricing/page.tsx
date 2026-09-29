@@ -17,20 +17,22 @@ export default function PricingPage() {
       }
       intro="Pricing is shaped around goals, scope, channels and technology requirements. These starting points make the conversation easier."
     >
-      <section className="section shell">
+      <section className="section shell pricing-section">
         <div className="pricing-grid">
           {plans.map(([name, price, copy, items], index) => (
             <article className={`price-card${index === 1 ? " price-card-featured" : ""}`} key={name}>
               {index === 1 && <span className="featured-label">Most chosen</span>}
-              <p className="eyebrow">{name}</p>
-              <h2>{price}</h2>
-              <p>{copy}</p>
+              <div className="price-card-header">
+                <p className="eyebrow">{name}</p>
+                <h2>{price}</h2>
+                <p className="price-copy">{copy}</p>
+              </div>
               <ul>
                 {items.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
               </ul>
-              <a className="button" href="/contact">
+              <a className="button price-button" href="/contact">
                 Discuss scope <i>-&gt;</i>
               </a>
             </article>

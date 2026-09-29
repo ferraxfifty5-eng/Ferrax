@@ -8,10 +8,10 @@ export function AnalyticsProvider() {
   const [consent, setConsent] = useState<string | null>(null);
 
   useEffect(() => {
-    const timer = window.setTimeout(() => setConsent(window.localStorage.getItem("thedark8-analytics-consent")), 0);
+    const timer = window.setTimeout(() => setConsent(window.localStorage.getItem("ferrax-analytics-consent")), 0);
     const handleConsent = (event: Event) => setConsent((event as CustomEvent<string>).detail);
-    window.addEventListener("thedark8-consent", handleConsent);
-    return () => { window.clearTimeout(timer); window.removeEventListener("thedark8-consent", handleConsent); };
+    window.addEventListener("ferrax-consent", handleConsent);
+    return () => { window.clearTimeout(timer); window.removeEventListener("ferrax-consent", handleConsent); };
   }, []);
 
   if (!isAnalyticsConfigured() || consent !== "accepted") return null;

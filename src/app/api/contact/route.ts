@@ -93,7 +93,7 @@ async function deliverToResend(submission: Record<string, string>) {
       from: process.env.RESEND_FROM_EMAIL ?? "onboarding@resend.dev",
       to: [process.env.RESEND_TO_EMAIL ?? "thedarkeight8@gmail.com"],
       subject: `${submission.formType === "growth-audit" ? "Growth audit" : "Contact enquiry"}: ${submission.company}`,
-      html: `<h2>TheDark8 Tech enquiry</h2>${lines}`,
+      html: `<h2>FERRAX enquiry</h2>${lines}`,
       reply_to: submission.email,
     }),
     cache: "no-store",

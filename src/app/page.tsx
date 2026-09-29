@@ -1,6 +1,6 @@
 "use client";
 
-import { SiteFooter, SiteNav } from "@/components/inner-page";
+import { SiteFooter } from "@/components/inner-page";
 import { trackEvent } from "@/lib/analytics";
 
 const services = [["01", "Digital strategy", "A clear growth roadmap built around your commercial goals.", "digital-marketing"], ["02", "Performance marketing", "Paid acquisition designed for signal, not noise.", "performance-marketing"], ["03", "SEO and organic growth", "Search visibility, local discovery and useful content.", "seo"], ["04", "Web and e-commerce", "High-performance experiences that turn attention into action.", "web-development"], ["05", "CRM and automation", "Follow-up systems that keep valuable leads moving.", "crm-automation"], ["06", "AI and technology", "Practical automation for the work your team repeats.", "ai-solutions"]];
@@ -29,12 +29,11 @@ const systemPillars = [
 
 export default function Home() {
   return <main className="motion-page">
-    <SiteNav />
     <section className="hero shell" id="top">
       <div className="hero-copy">
         <p className="eyebrow"><span className="pulse" /> Digital growth x technology x automation</p>
         <h1>Turn digital presence into <em>business growth.</em></h1>
-        <p className="lede">TheDark8 Tech combines digital marketing, technology and automation to help businesses attract customers, generate qualified leads and build scalable digital systems.</p>
+        <p className="lede">FERRAX combines digital marketing, technology and automation to help businesses attract customers, generate qualified leads and build scalable digital systems.</p>
         <div className="hero-actions">
           <a className="button" href="/free-growth-audit" onClick={() => trackEvent("cta_click", { location: "hero_primary", page: "home" })}>Get your free growth audit <i>-&gt;</i></a>
           <a className="text-link" href="#services" onClick={() => trackEvent("cta_click", { location: "hero_secondary", page: "home" })}>Explore services <i>-&gt;</i></a>
@@ -42,8 +41,8 @@ export default function Home() {
       </div>
 
       <div className="hero-visual" aria-label="Connected customer acquisition system">
-        <div className="visual-noise" /><div className="visual-scan" />
-        <div className="visual-header"><span>THE DARK8 SYSTEM</span><span>LIVE / 01</span></div>
+        <div className="visual-noise" /><div className="visual-grid" aria-hidden="true" /><div className="visual-scan" /><div className="visual-sweep" aria-hidden="true" />
+        <div className="visual-header"><span>THE FERRAX SYSTEM</span><span>LIVE / 01</span></div>
         <div className="orb orb-one" />
         <div className="orb orb-two" />
         <div className="orb orb-three" />

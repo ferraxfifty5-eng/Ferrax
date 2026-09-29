@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const consentKey = "thedark8-analytics-consent";
+const consentKey = "ferrax-analytics-consent";
 
 export function CookieConsent() {
   const [visible, setVisible] = useState(false);
@@ -15,7 +15,7 @@ export function CookieConsent() {
   function choose(value: "accepted" | "declined") {
     window.localStorage.setItem(consentKey, value);
     setVisible(false);
-    window.dispatchEvent(new CustomEvent("thedark8-consent", { detail: value }));
+    window.dispatchEvent(new CustomEvent("ferrax-consent", { detail: value }));
   }
 
   if (!visible) return null;
