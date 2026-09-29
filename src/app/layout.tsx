@@ -4,7 +4,7 @@ import { CookieConsent } from "@/components/cookie-consent";
 import { SiteNav } from "@/components/inner-page";
 import "./globals.css";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.ferrax.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.ferrax.in";
 
 export const metadata: Metadata = {
   title: "FERRAX | Digital Growth x Technology x Automation",
