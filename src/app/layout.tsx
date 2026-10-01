@@ -25,11 +25,7 @@ export const metadata: Metadata = {
     description: "Digital Growth x Technology x Automation.",
   },
   icons: {
-    icon: [
-      { url: "/Fav icon.png?v=5", type: "image/png", sizes: "32x32" },
-      { url: "/Fav icon.png?v=5", type: "image/png", sizes: "192x192" },
-      { url: "/Fav icon.png?v=5", type: "image/png", sizes: "512x512" },
-    ],
+    icon: [{ url: "/favicon.ico", type: "image/x-icon", sizes: "any" }],
     apple: [{ url: "/Fav icon.png?v=5", type: "image/png", sizes: "180x180" }],
   },
   other: {
